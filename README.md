@@ -16,6 +16,9 @@ springboot+springcloud打造房产销售平台
 ![](http://ww1.sinaimg.cn/large/006pwLrvgy1fqib6kshxgj30u00i6409.jpg)
 ![](http://ww1.sinaimg.cn/large/006pwLrvgy1fqib7f8nuzj30nh0gtq58.jpg)
 
+#	注意
+doc文件夹中的文档都是markdown格式,为了保证文档中的序号排序正确,推荐使用`Yu Writer`进行查看，我保证,这绝对是目前为止最好用的markdown编辑器。可以直接在github中搜索
+
 
 #	如何启动？
 clone下源码之后,导入你的IDE中,将sql文件导入到你的mysql中,并修改数据源的配置文件。然后就按照SpringBoot的启动方式去启动
