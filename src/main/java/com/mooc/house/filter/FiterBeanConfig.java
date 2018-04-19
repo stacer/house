@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 步骤:第三章1.2.3
+ * 自定义过滤器的配置
  * @author 326873
  *
  */
