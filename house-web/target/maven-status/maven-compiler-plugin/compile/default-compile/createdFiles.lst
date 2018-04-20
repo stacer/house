@@ -1,8 +1,0 @@
-com\mooc\house\HouseApplication.class
-com\mooc\house\autoconfig\HttpClientProperties.class
-com\mooc\house\filter\FiterBeanConfig.class
-com\mooc\house\web\controller\UserController.class
-com\mooc\house\autoconfig\EnableHttpClient.class
-com\mooc\house\filter\LogFilter.class
-com\mooc\house\autoconfig\HttpClientAutoConfiguration.class
-com\mooc\house\web\controller\HelloController.class
