@@ -3,100 +3,65 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- 步骤:第三章1.11.1 -->
 	<groupId>com.mooc.house</groupId>
-	<artifactId>house</artifactId>
+	<artifactId>house-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>house</name>
 	<description>Demo project for Spring Boot</description>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		  <artifactId>spring-boot-starter-parent</artifactId>
-		  <version>1.4.7.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-freemarker</artifactId>
-		</dependency>
-		<!-- 步骤:第三章1.2.1将内嵌容器替换为jetty -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<!-- <artifactId>spring-boot-starter-web</artifactId> -->
-			<artifactId>spring-boot-starter-jetty</artifactId>
-		</dependency>
-		
-		<!-- 步骤:第三章1.3.1引入mybatis和mysql -->
-		<!-- mysql -->
-		<dependency>  
-            <groupId>mysql</groupId>  
-            <artifactId>mysql-connector-java</artifactId>  
-            <scope>runtime</scope>  
-        </dependency>  
-          
-        <!-- mybatis -->  
-        <dependency>  
-            <groupId>org.mybatis.spring.boot</groupId>  
-            <artifactId>mybatis-spring-boot-starter</artifactId>  
-            <version>1.3.0</version>  
-        </dependency>
-		
-		<!-- 步骤:第三章1.4.1.1 引入Druid依赖-->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>1.1.6</version>
-		</dependency>
-		
-		<!-- 步骤:第三章1.4.1.2.3 引入guava工具类 -->
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>18.0</version>
-		</dependency>
-		
-		<!-- 步骤:第三章1.5.1 添加freemarker依赖 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-freemarker</artifactId>
-		</dependency>
-		
-		<!-- 步骤:第三章1.9.1 添加httpclient依赖 -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-		</dependency>
-	</dependencies>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>1.4.7.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
+			<!-- 步骤：第三章1.11.13 加入mavenplugin-->
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
 
+	<modules>
+		<module>house-common</module>
+		<module>house-biz</module>
+		<module>house-web</module>
+	</modules>
 </project>

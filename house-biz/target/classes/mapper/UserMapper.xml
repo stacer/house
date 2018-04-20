@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 步骤第三章 1.11.6 修改namespace -->
+<mapper namespace="com.mooc.house.biz.mapper.UserMapper">
+
+	<select id="getAllUsers" resultType="user">
+		select * from user
+	</select>
+</mapper>
