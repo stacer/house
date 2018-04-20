@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mooc.house.mapper.service.IUserService;
 import com.mooc.house.model.User;
+import com.mooc.house.service.IUserService;
 
 /**
  * 步骤第三章1.5.4 测试freemarker
