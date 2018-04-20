@@ -17,7 +17,7 @@
 	
 	<typeAliases>
 		<!-- 配置别名包 -->
-		<typeAlias type="com.mooc.house.model.User" alias="user"/>
+		<typeAlias type="com.mooc.house.common.model.User" alias="user"/>
 	</typeAliases>
 	
 	<!-- mapper -->
