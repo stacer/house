@@ -1,4 +1,4 @@
-package com.mooc.house.mapper.service;
+package com.mooc.house.service;
 
 import java.util.List;
 
