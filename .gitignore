@@ -1,4 +1,7 @@
 /target/
+/house-biz/target
+/house-common/target
+/house-web/target
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

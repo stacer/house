@@ -7,4 +7,32 @@
 	<select id="getAllUsers" resultType="user">
 		select * from user
 	</select>
+	
+	<insert id="insert">
+		insert into user(
+					name,
+					phone,
+					email,
+					aboutme,
+					passwd,
+					avatar,
+					type,
+					create_time,
+					enable
+		)values(
+			#{name},
+			#{phone},
+			#{email},
+			#{aboutme},
+			#{passwd},
+			#{avatar},
+			#{type},
+			#{createTime},
+			#{enable}
+		)
+	</insert>
+	
+	<delete id="delete">
+		delete from user where email = #{email}
+	</delete>
 </mapper>

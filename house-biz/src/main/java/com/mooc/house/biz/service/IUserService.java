@@ -8,4 +8,6 @@ import com.mooc.house.common.model.User;
 
 public interface IUserService {
 	public List<User> getAllUsers();
+
+	public boolean addAccount(User account);
 }

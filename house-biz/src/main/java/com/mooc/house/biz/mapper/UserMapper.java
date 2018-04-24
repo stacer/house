@@ -12,5 +12,9 @@ import com.mooc.house.common.model.User;
 public interface UserMapper {
 
 	public List<User> getAllUsers();
+
+	public int insert(User account);
+
+	public int delete(String value);
 	
 }

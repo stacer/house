@@ -34,5 +34,17 @@
            <artifactId>mybatis-spring-boot-starter</artifactId>  
            <version>1.3.0</version>  
        </dependency>
+       
+       <dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.4</version>
+	</dependency>
+	
+	<!-- 步骤：第四章1.3 添加mail -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-mail</artifactId>
+	</dependency>
   </dependencies>
 </project>

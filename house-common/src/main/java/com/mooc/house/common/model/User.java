@@ -33,7 +33,7 @@ public class User {
 	
 	private String key;
 	
-	private Long   agencyId;
+	private Long   agencyId;	//经纪机构id
 	
 	private String aboutme;
 	
